@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
+    <script src="lang.js"></script>
+    <script>
+        window.onload = toggle
+    </script>
+
     <title>Portfolio - NV</title>
 
     <style>
@@ -34,7 +39,7 @@
             position: relative;
             text-align: center;
             height: 72vh;
-            width: 24%;
+            width: 23%;
             margin: 2.5% 20%;
             padding-top: 12px;
             padding-bottom: 1px;
@@ -54,23 +59,68 @@
 
     <sbase>
         <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif">N.V</h1>
-        <h3 style="font-family:cursive;"><i>Datatekniker — Programmering</i></h3>
+        <h3 data-key="h0" style="font-family:cursive;"><i></i></h3>
+        <button onclick="toggle()" data-key="button"></button>
     </sbase>
 
     <offset style="font-size: small;line-height: 12px;text-align: left;">
-        <h1>Profil</h1>
+        <h1 data-key="h1"></h1> <!--Profil-->
 
-        <p>Stille type med ADHD, hvilket giver mig ekstremt fokus og energi, når jeg arbejder med noget jeg brænder for.</p>
-        <p>Jeg lærer hurtigt, arbejder bedst selvstændigt med fordybelse og tekniske udfordringer, men bidrager også gerne i mindre samarbejdsgrupper.</p>
-        <p>Jeg fortækker ikke at arbejde med AI til problemløsning.</p>
+        <p data-key="p1"></p>
+        <p data-key="p2"></p>
+        <p data-key="p3"></p>
         
         <hr>
 
-        <h2>Uddannelse</h2>
+        <h2 data-key="h2"></h2> <!--Uddannelse-->
         <p>
-            TEC Ballerup <br>
-            <i>Aug. 2025 — Jan. 2026</i> <br>
+            TEC Ballerup <br/>
+            <i>Aug. 2025 — Jan. 2026</i> <br/>
             Data- og kommunikationsuddannelsen
+        </p>
+
+        <hr>
+
+        <h2 lang="da" data-key="h3"></h2> <!--Capabilities-->
+        <p>
+            <ul style="line-height: 20px;padding-left: 10%;font-size: medium;">
+                <li data-key="ul1"></li>
+                <li data-key="ul2"></li>
+                <li data-key="ul3"></li>
+                <li data-key="ul4"></li>
+                <li data-key="ul5"></li>
+                <li data-key="ul6"></li>
+                <li data-key="ul7"></li>
+                <li data-key="ul8"></li>
+            </ul>
+        </p>
+    </offset>
+    <offset style="margin: -37.75% 50%;">
+        <h2 data-key="h4"></h2> <!--Erfaring-->
+        <p>
+            <ul style="line-height: 20px;text-align: left;padding-left: 0%;">
+                <li data-key="ul9"></li>
+                <li data-key="ul10"></li>
+                <li data-key="ul11"></li>
+                <li data-key="ul12"></li>
+                <li data-key="ul13"></li>
+                <li data-key="ul14"></li>
+                <li data-key="ul15"></li>
+                <li data-key="ul16"></li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h3 data-key="h5"></h2> <!--Kendskaber-->
+        <p>
+            <ul style="line-height: 20px;text-align: left;padding-left: 0%;">
+                <li>HTML, SQL, Java, Assembly, Python</li>
+                <li>Powershell, Linux, HyperV, VirtualBox</li>
+                <li data-key="ul17">Netværk, Subnetting, Kommunikationsteori</li>
+                <li>Trello, Git/GitHub</li>
+                <li data-key="ul18">Kendskab til AI siden 2021</li>
+            </ul>
         </p>
     </offset>
 
