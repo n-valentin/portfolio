@@ -2,13 +2,15 @@
 <html lang="da">
 <head>
     <script src="lang.js"></script>
-    <script>
-        window.onload = toggle
-    </script>
 
     <title>Portfolio - NV</title>
 
     <style>
+        :root {
+            --cubeSize: 80vh;
+            --cubeSize2: calc(var(--cubeSize)/2);
+            --bgimg: radial-gradient(rgb(32, 48, 49, 1), rgb(35, 45, 45, 1), rgb(27, 37, 38, 0.85))
+        }
         body {
             margin: 0;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -19,6 +21,7 @@
             height: 1px;
             border: 0;
         }
+
         sbase {
             display: block;
             position: fixed center;
@@ -31,9 +34,8 @@
             padding-bottom: 2.5vh;
             border-radius: 1.5vh;
             color: rgb(142, 167, 204);
-            background-image: radial-gradient(rgb(32, 48, 49), rgb(27, 37, 37));
+            background-image: var(--bgimg);
             line-height: 0vh;
-            z-index: 2;
         }
         offset {
             display: block;
@@ -41,56 +43,66 @@
             text-align: left;
             height: 72vh;
             width: 23%;
-            margin: 2.5% 20%;
+            margin: 2.5vh 20%;
             padding-top: 1vh;
             padding-bottom: 1px;
             padding-left: 3%;
             padding-right: 3%;
             border-radius: 2vh;
             color: rgb(142, 167, 204);
-            background-image: radial-gradient(rgb(32, 48, 49, 0.8), rgb(27, 37, 37, 0.8));
+            background-image: var(--bgimg);
             font-size: 1.8vh;
             line-height: 1.8vh;
             z-index: 2;
-            
         }
+
 
         /*cube thing---------------*/
         .cubeframe {
-            width: 400px;
-            height: 400px;
-            perspective: 600px;
+            width: var(--cubeSize);
+            height: var(--cubeSize);
+            perspective: 100vh;
+            margin: calc(50% - (var(--cubeSize2))) calc(50% - var(--cubeSize2));
         }
 
         .cube {
             width: 100%;
             height: 100%;
-            position: relative;
-            margin: 50% 100%;
+            position: center;
             transform-style: preserve-3d;
             will-change: transform;
         }
 
         .face {
             position: absolute;
-            width: 400px;
-            height: 400px;
-            border: 1px solid #fff;
-            z-index: 1;
+            width: var(--cubeSize);
+            height: var(--cubeSize);
+            border: 1px solid #ffca99;
+            z-index: -10;
         }
 
-        .front  { transform: rotateY(0deg) translateZ(100px); }
-        .back   { transform: rotateY(180deg) translateZ(100px); }
-        .left   { transform: rotateY(-90deg) translateZ(100px); }
-        .right  { transform: rotateY(90deg) translateZ(100px); }
-        .top    { transform: rotateX(90deg) translateZ(100px); }
-        .bottom { transform: rotateX(-90deg) translateZ(100px); }
+        .front  { transform: rotateY(0deg) translateZ(var(--cubeSize2)); }
+        .back   { transform: rotateY(180deg) translateZ(var(--cubeSize2)); }
+        .left   { transform: rotateY(-90deg) translateZ(var(--cubeSize2)); }
+        .right  { transform: rotateY(90deg) translateZ(var(--cubeSize2)); }
+        .top    { transform: rotateX(90deg) translateZ(var(--cubeSize2)); }
+        .bottom { transform: rotateX(-90deg) translateZ(var(--cubeSize2)); }
         /*---------------*/
+
+        /*dot particle canvas*/
+        #dotscanvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
 
     </style>
 </head>
 <body style="
-    background-image: radial-gradient(rgb(45, 60, 60), rgb(25, 40, 40));
+    background-image: radial-gradient(rgb(34, 43, 43), rgb(13, 20, 20));
     min-height: 200vh;
     text-shadow: 0 0 1vh black;
 ">
@@ -101,7 +113,7 @@
         <button onclick="toggle()" data-key="button"></button>
     </sbase>
 
-    <offset style="line-height: 1.8vh;">
+    <offset>
         <h1 data-key="h1"></h1> <!--Profil-->
 
         <p data-key="p1"></p>
@@ -170,7 +182,7 @@
 
 
     <!--spawn funny cube-->
-    <div class="cubeframe">
+    <div class="cubeframe" style="position: center;">
         <div class="cube">
             <div class="face front"></div>
             <div class="face back"></div>
@@ -181,7 +193,10 @@
         </div>
     </div>
 
-    <script src="cube.js"></script>
+    <script src="cubefx.js"></script>
+
+    <canvas id="dotscanvas"></canvas>
+    <script src="dotsfx.js"></script>
 
 </body>
 </html>

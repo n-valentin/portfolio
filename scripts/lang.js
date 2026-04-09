@@ -83,3 +83,5 @@ function toggle() {
     el.textContent = translations[current][key];
   });
 }
+
+window.onload = toggle;

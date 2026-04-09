@@ -1,7 +1,7 @@
 let cube = document.querySelector('.cube');
 let t = 0;
 
-function animate() {
+function cube_animate() {
     t += 0.02;
 
     let angle = t * 10 + (Math.cos(t*0.5) * 5);
@@ -11,7 +11,7 @@ function animate() {
         rotateY(${angle}deg)
     `;
 
-    requestAnimationFrame(animate);
+    requestAnimationFrame(cube_animate);
 }
 
-animate();
+cube_animate();
