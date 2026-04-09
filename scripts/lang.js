@@ -52,7 +52,7 @@ const translations = {
         ul2: "Fast learner and Innovative",
         ul3: "Best with Lua and C#",
         ul4: "Game-security og Modding",
-        ul5: "Declarative orogramming",
+        ul5: "Declarative programming",
         ul6: "Strong in general tech and computer science",
         ul7: "Strong in Programming theory",
         ul8: "Strong in English and Math",
