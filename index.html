@@ -9,7 +9,15 @@
         :root {
             --cubeSize: 80vh;
             --cubeSize2: calc(var(--cubeSize)/2);
-            --bgimg: radial-gradient(rgb(32, 48, 49, 1), rgb(35, 45, 45, 1), rgb(27, 37, 38, 0.85))
+            --bgimg: radial-gradient(rgb(32, 48, 49, 1), rgb(35, 45, 45, 1), rgb(27, 37, 38, 0.85));
+            --baseWidth: 800px;
+            --basePadding: 24px;
+
+            /*figuring this out took longer than it should I am NOT touching this shit again*/
+            --offsetWidth: calc((var(--baseWidth) / 2) - var(--basePadding)*1.5);
+            --offsetMargin-leftLeft: calc((50% - var(--offsetWidth)) - var(--basePadding)*1.5);
+            --offsetMargin-leftRight: calc((50% + var(--basePadding)*1.5));
+            --baseBorderRadius: 24px;
         }
         body {
             margin: 0;
@@ -24,36 +32,32 @@
 
         sbase {
             display: block;
-            position: fixed center;
             text-align: center;
             text-shadow: 2px;
-            height: 12vh;
-            width: 60%;
-            margin: -1vh 20%;
-            padding-top: 1vh;
-            padding-bottom: 2.5vh;
-            border-radius: 1.5vh;
+            height: 100px;
+            width: var(--baseWidth);
+            padding: var(--basePadding);
+            margin: -16px calc(50% - (var(--baseWidth) / 2));
+            border-radius: var(--baseBorderRadius);
             color: rgb(142, 167, 204);
             background-image: var(--bgimg);
-            line-height: 0vh;
+            line-height: 0;
         }
         offset {
             display: block;
-            position:absolute;
+            position: absolute;
             text-align: left;
-            height: 72vh;
-            width: 23%;
-            margin: 2.5vh 20%;
-            padding-top: 1vh;
-            padding-bottom: 1px;
-            padding-left: 3%;
-            padding-right: 3%;
-            border-radius: 2vh;
+            height: 620px;
+            width: var(--offsetWidth);
+            padding: var(--basePadding);
+            margin: 30px var(--offsetMargin-leftLeft);
+            border-radius: var(--baseBorderRadius);
             color: rgb(142, 167, 204);
             background-image: var(--bgimg);
-            font-size: 1.8vh;
-            line-height: 1.8vh;
-            z-index: 2;
+            font-size: 14px;
+            line-height: 18px;
+            z-index: 1;
+            padding-top: 10px;
         }
 
 
@@ -108,8 +112,8 @@
 ">
 
     <sbase>
-        <p style="font-size:5vh; font-family:Verdana, Geneva, Tahoma, sans-serif"><b>N.V</b></p>
-        <i><p data-key="h0" style="font-size:2.5vh;font-family:cursive;"></p></i>
+        <p style="font-size:32px; font-family:Verdana, Geneva, Tahoma, sans-serif"><b>N.V</b></p>
+        <i><p data-key="h0" style="font-size:24px;font-family:cursive;"></p></i>
         <button onclick="toggle()" data-key="button"></button>
     </sbase>
 
@@ -145,7 +149,7 @@
             </ul>
         </p>
     </offset>
-    <offset style="margin-left: 51%;">
+    <offset style="margin-left: var(--offsetMargin-leftRight);">
         <h2 data-key="h4"></h2> <!--Erfaring-->
         <p>
             <ul style="text-align: left;padding-left: 0%;">
@@ -173,11 +177,14 @@
             </ul>
         </p>
         
+        <hr>
 
-        <p style="text-align:left;line-height: 40px; margin: 11% -10%;">
+        <p style="text-align:left;line-height: 40px;">
             <img src="img/github-icon.png" style="float:left;width: 40px;height: 40px;">
             <a href="https://github.com/n-valentin" style="color: rgb(116, 157, 218);">n-valentin</a>
         </p>
+
+        
     </offset>
 
 
