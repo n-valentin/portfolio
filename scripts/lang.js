@@ -8,7 +8,7 @@ const translations = {
         h1: "Profil",
         p1: "Stille type med ADHD, hvilket giver mig ekstremt fokus og energi, når jeg arbejder med noget jeg brænder for.",
         p2: "Jeg lærer hurtigt, arbejder bedst selvstændigt med fordybelse og tekniske udfordringer alene, men bidrager også gerne i mindre samarbejdsgrupper.",
-        p3: "Jeg fortækker ikke at arbejde med AI til problemløsning.",
+        p3: "Jeg foretrækker ikke at arbejde med AI til problemløsning.",
 
         h2: "Uddannelse",
 
@@ -35,6 +35,11 @@ const translations = {
         h5: "Kendskaber",
         ul17: "Netværk, Subnetting, Kommunikationsteori",
         ul18: "Kendskab til AI siden 2021",
+
+        bhop0: "Men hvad er det?",
+        bhop1: "Quake III lavede i bund og grund FPS-bevægelsen."+
+        " Counter-Strike, Garry's Mod, Team Fortress 2 og Unreal Tournament"+
+        " -- de har alle kopierede den samme funktion, for at skabe 'bunny hopping'.",
     },
     en: {
         button: "Skift til Dansk 🇩🇰",
@@ -70,6 +75,11 @@ const translations = {
         h5: "Familiarity",
         ul17: "Networking, Communication-theory",
         ul18: "Familiar with AI since 2021",
+
+        bhop0: "But what is it?",
+        bhop1: "Quake III basically invented FPS movement."+
+        " Counter-Strike, Garry's Mod, Team Fortress 2, and Unreal Tournament"+
+        " -- they have all inherited the exact same function, to invent 'bunny hopping'.",
 
     }
 };

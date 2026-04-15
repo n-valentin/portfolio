@@ -2,13 +2,18 @@
 <html lang="da">
 <head>
     <script src="scripts/lang.js"></script>
+	<link href="scripts/lib/prism.css" rel="stylesheet" />
+
+    <!--Video.JS Video Player-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@videojs/html/cdn/video.js"></script>
 
     <title>Portfolio - NV</title>
 
     <style>
         :root {
-            --cubeSize: 80vh;
+            --cubeSize: 600px;
             --cubeSize2: calc(var(--cubeSize)/2);
+
             --bgimg: radial-gradient(rgb(32, 48, 49, 1), rgb(35, 45, 45, 1), rgb(27, 37, 38, 0.85));
             --baseWidth: 800px;
             --basePadding: 24px;
@@ -23,11 +28,20 @@
             margin: 0;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             height: 100%;
+            scrollbar-color: rgb(55, 69, 69) rgb(39, 39, 39);
         }
         hr {
             background-color: rgb(66, 73, 87);
             height: 1px;
             border: 0;
+        }
+        pre {
+            overflow-y:scroll;
+            min-height: 30px;
+            min-width: 150px;
+            max-height: 100px;
+            max-width: 800px;
+            border-radius: 8px;
         }
 
         sbase {
@@ -45,12 +59,12 @@
         }
         offset {
             display: block;
-            position: absolute;
+            position: relative;
             text-align: left;
             height: 620px;
             width: var(--offsetWidth);
             padding: var(--basePadding);
-            margin: 30px var(--offsetMargin-leftLeft);
+            margin: 40px var(--offsetMargin-leftLeft);
             border-radius: var(--baseBorderRadius);
             color: rgb(142, 167, 204);
             background-image: var(--bgimg);
@@ -58,21 +72,40 @@
             line-height: 18px;
             z-index: 1;
             padding-top: 10px;
+            padding-bottom: 10px;
+            overflow-y:hidden;
+        }
+        newOffset {
+            display: block;
+            position: relative;
+            text-align: left;
+            height: auto;
+            width: var(--baseWidth);
+            padding: var(--basePadding);
+            margin: 40px var(--offsetMargin-leftLeft);
+            border-radius: var(--baseBorderRadius);
+            color: rgb(142, 167, 204);
+            background-image: var(--bgimg);
+            font-size: 14px;
+            line-height: 18px;
+            z-index: 1;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            overflow-y:hidden;
         }
 
-
-        /*cube thing---------------*/
+        /*background 3d cube-----------*/
         .cubeframe {
             width: var(--cubeSize);
             height: var(--cubeSize);
             perspective: 100vh;
-            margin: calc(50% - (var(--cubeSize2))) calc(50% - var(--cubeSize2));
+            margin: 0 calc(50% - var(--cubeSize2));
+            position: absolute;
         }
 
         .cube {
             width: 100%;
             height: 100%;
-            position: center;
             transform-style: preserve-3d;
             will-change: transform;
         }
@@ -102,8 +135,8 @@
             pointer-events: none;
             z-index: 1;
         }
-
     </style>
+
 </head>
 <body style="
     background-image: radial-gradient(rgb(34, 43, 43), rgb(13, 20, 20));
@@ -135,9 +168,9 @@
 
         <hr>
 
-        <h2 lang="da" data-key="h3"></h2> <!--Capabilities-->
+        <h2 lang="da" data-key="h3"></h2> <!--Kompetencer-->
         <p>
-            <ul style="line-height: 2vh;padding-left: 10%;">
+            <ul style="line-height: 16px;padding-left: 10%;">
                 <li data-key="ul1"></li>
                 <li data-key="ul2"></li>
                 <li data-key="ul3"></li>
@@ -148,8 +181,8 @@
                 <li data-key="ul8"></li>
             </ul>
         </p>
-    </offset>
-    <offset style="margin-left: var(--offsetMargin-leftRight);">
+    </offset> <!--10x2 padding, 40 offset, 620 height-->
+    <offset style="margin-top: calc(-40px - 620px - 20px);margin-left: var(--offsetMargin-leftRight);position: absolute;">
         <h2 data-key="h4"></h2> <!--Erfaring-->
         <p>
             <ul style="text-align: left;padding-left: 0%;">
@@ -180,16 +213,14 @@
         <hr>
 
         <p style="text-align:left;line-height: 40px;">
-            <img src="img/github-icon.png" style="float:left;width: 40px;height: 40px;">
+            <img src="assets/img/github-icon.png" style="float:left;width: 40px;height: 40px;">
             <a href="https://github.com/n-valentin" style="color: rgb(116, 157, 218);">n-valentin</a>
         </p>
 
-        
     </offset>
 
-
     <!--spawn funny cube-->
-    <div class="cubeframe" style="position: center;">
+    <div class="cubeframe">
         <div class="cube">
             <div class="face front"></div>
             <div class="face back"></div>
@@ -200,10 +231,73 @@
         </div>
     </div>
 
+    <newOffset>
+
+        <h2>Quake III Movement (Roblox Studio)</h2>
+
+        <pre style="min-height: 200px;"><b>Lua - Luau</b><br/><code class="language-lua" id="test">
+local function Accelerate(wish_direction:Vector3, current_velocity:Vector3, max_accel:number, max_velocity:number, dt:number): Vector3
+	if crouched then
+		max_velocity = set.Movement.MAX_SPEED[1] * 0.5
+		max_accel = set.Movement.MAX_ACCEL[2]
+	end
+	
+	--sv_accelerate
+	local proj_vel:number = current_velocity:Dot(wish_direction)
+	local accel_vel:number = max_accel * dt
+
+	if (proj_vel + accel_vel > max_velocity) then
+		accel_vel = max_velocity - proj_vel end
+
+	return current_velocity + wish_direction * accel_vel
+end
+
+local connect_heartbeat: RBXScriptConnection
+connect_heartbeat = client.Heartbeat:Connect(function(dt)
+    local vecForward,vecRight =
+		hrp.CFrame.LookVector * (keyW - keyS),
+		hrp.CFrame.RightVector * (keyD - keyA)
+		
+	wishDirection = vecForward + vecRight
+	--Post calculation to fix normalization errors.
+	if wishDirection.Magnitude > 0 then
+		wishDirection = wishDirection.Unit
+	else
+		wishDirection = Vector3.new(0, 0, 0)
+	end
+	
+	local currentVelocity = hrp.AssemblyLinearVelocity * Vector3.new(1,0,1)
+	local move:Vector3 = Vector3.new(0,0,0)
+	
+	--friction
+	local velmag = currentVelocity.Magnitude
+	if velmag ~= 0 and grounded then--avoid dividing by 0.
+		local drop = velmag * dt * 7
+		currentVelocity *= math.max(velmag - drop, 0) / velmag
+	end
+	
+	move = Accelerate(wishDirection, currentVelocity, set.Movement.MAX_ACCEL[1], (grounded and set.Movement.MAX_SPEED[1] or set.Movement.MAX_SPEED[2]), dt)
+end)
+</code></pre>
+
+    <h2>Video Demo:</h2>
+
+    <video-player>
+        <video-skin>
+            <video src="assets/vid/quakebhop.mp4" playsinline></video>
+        </video-skin>
+    </video-player>
+
+    <h3 data-key="bhop0"></h3>
+    <p data-key="bhop1"></p>
+
+    </newOffset>
+
     <script src="scripts/cubefx.js"></script>
 
     <canvas id="dotscanvas"></canvas>
     <script src="scripts/dotsfx.js"></script>
 
+	<script src="scripts/lib/prism.js"></script>
 </body>
 </html>
