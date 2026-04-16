@@ -36,10 +36,17 @@ const translations = {
         ul17: "Netværk, Subnetting, Kommunikationsteori",
         ul18: "Kendskab til AI siden 2021",
 
+
+        prism1: "Code Block - Prism",
+        videojs1: "Video Player Plugin af VideoJS",
+
         bhop0: "Men hvad er det?",
         bhop1: "Quake III lavede i bund og grund det her 'FPS movement tech'."+
         " Counter-Strike, Garry's Mod, Team Fortress 2 og Unreal Tournament"+
-        " -- de har alle kopierede den samme funktion, for at skabe 'bunny hopping'.",
+        " -- de har alle kopierede den samme funktion, og skabte 'bunny hopping'.",
+        
+        more1: "Flere Ting",
+
     },
     en: {
         button: "Skift til Dansk 🇩🇰",
@@ -76,11 +83,16 @@ const translations = {
         ul17: "Networking, Communication-theory",
         ul18: "Familiar with AI since 2021",
 
+
+        prism1: "Code Block Mockup by Prism",
+        videojs1: "Video Player Plugin by VideoJS",
+
         bhop0: "But what is it?",
         bhop1: "Quake III basically invented this 'FPS movement tech'."+
         " Counter-Strike, Garry's Mod, Team Fortress 2, and Unreal Tournament"+
         " -- they have all inherited the exact same function, to invent 'bunny hopping'.",
 
+        more1: "More Stuff",
     }
 };
 

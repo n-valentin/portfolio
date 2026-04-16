@@ -237,7 +237,7 @@
 
         <h2>Quake III Movement (Roblox Studio)</h2>
 
-        <pre style="min-height: 200px;"><b>Lua - Luau</b><br/><code class="language-lua" id="test">
+        <pre style="min-height: 200px;"><b>Lua - Luau</b><br/><code class="language-lua">
 local function Accelerate(wish_direction:Vector3, current_velocity:Vector3, max_accel:number, max_velocity:number, dt:number): Vector3
 	if crouched then
 		max_velocity = set.Movement.MAX_SPEED[1] * 0.5
@@ -281,6 +281,7 @@ connect_heartbeat = client.Heartbeat:Connect(function(dt)
 	move = Accelerate(wishDirection, currentVelocity, set.Movement.MAX_ACCEL[1], (grounded and set.Movement.MAX_SPEED[1] or set.Movement.MAX_SPEED[2]), dt)
 end)
 </code></pre>
+        <i><p>Code Block Component - Prism</p></i>
 
         <h2>Video Demo:</h2>
 
@@ -289,6 +290,9 @@ end)
                 <video src="assets/vid/quakebhop.mp4" playsinline></video>
             </video-skin>
         </video-player>
+        <i><p>Video Player Plugin - VideoJS</p></i>
+
+        <hr>
 
         <h3 data-key="bhop0"></h3>
         <p data-key="bhop1"></p>
@@ -298,6 +302,59 @@ end)
         <a href="https://adrianb.io/2015/02/14/bunnyhop.html" style="color: var(--colorsecondary);">Source</a>
 
     </newOffset>
+    <newOffset>
+        
+        <h1 data-key="more1"></h1>
+
+        <video-player>
+            <video-skin>
+                <video src="assets/vid/camerademo.mp4" playsinline></video>
+            </video-skin>
+        </video-player>
+        
+        <pre style="min-height: 200px;"><b>Lua - Luau</b><br/><code class="language-lua">
+--The update() function is disclosed
+--However this is the initialization function
+
+function CameraController.Initialize()
+    -- Safely reset RenderStopped connection
+    -- If exists, disconnect it
+    if clientRSC then
+        clientRSC:Disconnect()
+    end
+
+    -- For debugging
+    print("Initializing CameraController")
+
+    -- Connect RenderStepped event to smoothly update camera
+    clientRSC = client.RenderStepped:Connect(update)
+
+    -- Internal field to associate camera with player position
+    -- The anchor acts as pivot for player
+    camera.CameraSubject = script.Anchor
+
+    -- Refresh crosshair reference
+    -- Dynamically associated with camera angles
+    crosshairGui = player.PlayerGui:WaitForChild("CrosshairGui")
+end
+</code></pre>
+
+        <hr>
+
+        <h3>Back-end: Modular Cooldown Handler (Roblox Studio)</h3>
+
+        <img src="assets/img/cooldownhandler.png">
+
+        <hr>
+
+        <img src="assets/img/ollamatest.png">
+
+        <hr>
+
+        <img src="assets/img/statbot.png">
+
+    </newOffset>
+    
 
     <script src="scripts/cubefx.js"></script>
 
