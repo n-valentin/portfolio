@@ -37,7 +37,7 @@ const translations = {
         ul18: "Kendskab til AI siden 2021",
 
         bhop0: "Men hvad er det?",
-        bhop1: "Quake III lavede i bund og grund FPS-bevægelsen."+
+        bhop1: "Quake III lavede i bund og grund det her 'FPS movement tech'."+
         " Counter-Strike, Garry's Mod, Team Fortress 2 og Unreal Tournament"+
         " -- de har alle kopierede den samme funktion, for at skabe 'bunny hopping'.",
     },
@@ -77,7 +77,7 @@ const translations = {
         ul18: "Familiar with AI since 2021",
 
         bhop0: "But what is it?",
-        bhop1: "Quake III basically invented FPS movement."+
+        bhop1: "Quake III basically invented this 'FPS movement tech'."+
         " Counter-Strike, Garry's Mod, Team Fortress 2, and Unreal Tournament"+
         " -- they have all inherited the exact same function, to invent 'bunny hopping'.",
 

@@ -23,6 +23,8 @@
             --offsetMargin-leftLeft: calc((50% - var(--offsetWidth)) - var(--basePadding)*1.5);
             --offsetMargin-leftRight: calc((50% + var(--basePadding)*1.5));
             --baseBorderRadius: 24px;
+            --colorprimary: rgb(142, 167, 204);
+            --colorsecondary: rgb(116, 157, 218);
         }
         body {
             margin: 0;
@@ -53,7 +55,7 @@
             padding: var(--basePadding);
             margin: -16px calc(50% - (var(--baseWidth) / 2));
             border-radius: var(--baseBorderRadius);
-            color: rgb(142, 167, 204);
+            color: var(--colorprimary);
             background-image: var(--bgimg);
             line-height: 0;
         }
@@ -66,7 +68,7 @@
             padding: var(--basePadding);
             margin: 40px var(--offsetMargin-leftLeft);
             border-radius: var(--baseBorderRadius);
-            color: rgb(142, 167, 204);
+            color: var(--colorprimary);
             background-image: var(--bgimg);
             font-size: 14px;
             line-height: 18px;
@@ -84,7 +86,7 @@
             padding: var(--basePadding);
             margin: 40px var(--offsetMargin-leftLeft);
             border-radius: var(--baseBorderRadius);
-            color: rgb(142, 167, 204);
+            color: var(--colorprimary);
             background-image: var(--bgimg);
             font-size: 14px;
             line-height: 18px;
@@ -214,7 +216,7 @@
 
         <p style="text-align:left;line-height: 40px;">
             <img src="assets/img/github-icon.png" style="float:left;width: 40px;height: 40px;">
-            <a href="https://github.com/n-valentin" style="color: rgb(116, 157, 218);">n-valentin</a>
+            <a href="https://github.com/n-valentin" style="color: var(--colorsecondary);">n-valentin</a>
         </p>
 
     </offset>
@@ -280,16 +282,20 @@ connect_heartbeat = client.Heartbeat:Connect(function(dt)
 end)
 </code></pre>
 
-    <h2>Video Demo:</h2>
+        <h2>Video Demo:</h2>
 
-    <video-player>
-        <video-skin>
-            <video src="assets/vid/quakebhop.mp4" playsinline></video>
-        </video-skin>
-    </video-player>
+        <video-player>
+            <video-skin>
+                <video src="assets/vid/quakebhop.mp4" playsinline></video>
+            </video-skin>
+        </video-player>
 
-    <h3 data-key="bhop0"></h3>
-    <p data-key="bhop1"></p>
+        <h3 data-key="bhop0"></h3>
+        <p data-key="bhop1"></p>
+
+        <img src="assets/img/vectorprojection.png"></img>
+
+        <a href="https://adrianb.io/2015/02/14/bunnyhop.html" style="color: var(--colorsecondary);">Source</a>
 
     </newOffset>
 
