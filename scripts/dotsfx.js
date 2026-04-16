@@ -44,7 +44,7 @@ class Particle {
 }
 
 const particles = [];
-const particleCount = 200;
+const particleCount = 400;
 
 for (let i = 0; i < particleCount; i++) {
     particles.push(new Particle());
