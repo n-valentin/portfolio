@@ -237,7 +237,7 @@
 
         <h2>Quake III Movement (Roblox Studio)</h2>
 
-        <pre style="min-height: 200px;"><b>Lua - Luau</b><br/><code class="language-lua">
+<pre style="min-height: 200px;"><b>Lua - Luau</b><br/><code class="language-lua">
 local function Accelerate(wish_direction:Vector3, current_velocity:Vector3, max_accel:number, max_velocity:number, dt:number): Vector3
 	if crouched then
 		max_velocity = set.Movement.MAX_SPEED[1] * 0.5
@@ -281,7 +281,10 @@ connect_heartbeat = client.Heartbeat:Connect(function(dt)
 	move = Accelerate(wishDirection, currentVelocity, set.Movement.MAX_ACCEL[1], (grounded and set.Movement.MAX_SPEED[1] or set.Movement.MAX_SPEED[2]), dt)
 end)
 </code></pre>
-        <i><p>Code Block Component - Prism</p></i>
+
+        <a href="https://prismjs.com" style="color: var(--colorsecondary);">
+            <i><p>Prism Syntax Highlighter</p></i>
+        </a>
 
         <h2>Video Demo:</h2>
 
@@ -290,7 +293,10 @@ end)
                 <video src="assets/vid/quakebhop.mp4" playsinline></video>
             </video-skin>
         </video-player>
-        <i><p>Video Player Plugin - VideoJS</p></i>
+
+        <a href="https://prismjs.com" style="color: var(--colorsecondary);">
+            <i><p>VideoJS Video Player</p></i>
+        </a>
 
         <hr>
 
@@ -312,7 +318,7 @@ end)
             </video-skin>
         </video-player>
         
-        <pre style="min-height: 200px;"><b>Lua - Luau</b><br/><code class="language-lua">
+<pre style="min-height: 200px;"><b>Lua - Luau</b><br/><code class="language-lua">
 --The update() function is disclosed
 --However this is the initialization function
 
