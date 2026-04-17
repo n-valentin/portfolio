@@ -45,6 +45,13 @@ const translations = {
         " Counter-Strike, Garry's Mod, Team Fortress 2 og Unreal Tournament"+
         " -- de har alle kopierede den samme funktion, og skabte 'bunny hopping'.",
         
+        
+        fish1: "Det her er et fiske program til et Roblox spil, "+
+        "den registrerer automatisk, når en fisk er på krogen, og hiver den ind. "+
+        "Den bruger OpenCV til image recognition, med koden nedenfor. "+
+        "Og hvis du stadig læser, fortæl mig, om du kan li' speciel kaffe, for jeg elsker virkelig en god kop kaffe.",
+
+
         more1: "Flere Ting",
 
     },
@@ -91,6 +98,13 @@ const translations = {
         bhop1: "Quake III basically invented this 'FPS movement tech'."+
         " Counter-Strike, Garry's Mod, Team Fortress 2, and Unreal Tournament"+
         " -- they have all inherited the exact same function, to invent 'bunny hopping'.",
+
+
+        fish1: "This is a fishing tool for a roblox game, "+
+        "it automatically detects when a fish is on the line, and reels it in. "+
+        "This makes use of OpenCV for image recognition, with the code used below. "+
+        " And let me know if you like special coffee because I do love a good coffee.",
+
 
         more1: "More Stuff",
     }
