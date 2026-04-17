@@ -14,7 +14,8 @@
             --cubeSize: 600px;
             --cubeSize2: calc(var(--cubeSize)/2);
 
-            --bgimg: radial-gradient(rgb(32, 48, 49, 1), rgb(35, 45, 45, 1), rgb(27, 37, 38, 0.85));
+            --bgimg: radial-gradient(rgb(40, 32, 49), rgb(39, 35, 45), rgba(31, 27, 38, 0.85));
+            --bgimgface: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(28, 26, 43, 0.2), rgba(80, 64, 52, 0.85));
             --baseWidth: 800px;
             --basePadding: 24px;
 
@@ -23,14 +24,18 @@
             --offsetMargin-leftLeft: calc((50% - var(--offsetWidth)) - var(--basePadding)*1.5);
             --offsetMargin-leftRight: calc((50% + var(--basePadding)*1.5));
             --baseBorderRadius: 24px;
-            --colorprimary: rgb(142, 167, 204);
-            --colorsecondary: rgb(116, 157, 218);
+            --colorprimary: rgb(164, 178, 225);
+            --colorsecondary: rgb(182, 162, 255);
         }
         body {
             margin: 0;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             height: 100%;
-            scrollbar-color: rgb(55, 69, 69) rgb(39, 39, 39);
+            scrollbar-color: rgb(73, 72, 93) rgb(39, 39, 39);
+            
+            background-image: radial-gradient(rgb(38, 34, 43), rgb(16, 13, 20));
+            min-height: 200vh;
+            text-shadow: 0 0 1vh black;
         }
         hr {
             background-color: rgb(66, 73, 87);
@@ -119,7 +124,8 @@
             position: absolute;
             width: var(--cubeSize);
             height: var(--cubeSize);
-            border: 1px solid #ffca99;
+            border: 2px solid #ffca99;
+            background-image: var(--bgimgface);
             z-index: -10;
         }
 
@@ -151,11 +157,7 @@
     </style>
 
 </head>
-<body style="
-    background-image: radial-gradient(rgb(34, 43, 43), rgb(13, 20, 20));
-    min-height: 200vh;
-    text-shadow: 0 0 1vh black;
-">
+<body>
 
     <sbase>
         <p style="font-size:32px; font-family:Verdana, Geneva, Tahoma, sans-serif"><b>N.V</b></p>
@@ -249,7 +251,7 @@
 
         <h2>Quake III Movement (Roblox Studio)</h2>
 
-<pre style="min-height: 200px;"><b>Lua - Luau</b><br/><code class="language-lua">
+<pre style="min-height: 300px;"><b>Lua - Luau</b><br/><code class="language-lua">
 local function Accelerate(wish_direction:Vector3, current_velocity:Vector3, max_accel:number, max_velocity:number, dt:number): Vector3
 	if crouched then
 		max_velocity = set.Movement.MAX_SPEED[1] * 0.5
@@ -339,7 +341,7 @@ end)
             </video-skin>
         </video-player>
         
-<pre style="min-height: 200px;"><b>Lua - Luau</b><br/><code class="language-lua">
+<pre style="min-height: 300px;"><b>Lua - Luau</b><br/><code class="language-lua">
 --The update() function is disclosed
 --However this is the initialization function
 

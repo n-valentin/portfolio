@@ -36,7 +36,7 @@ class Particle {
     }
 
     draw() {
-        ctx.fillStyle = "gray";
+        ctx.fillStyle = 'rgba(255,255,255,0.2)';
         ctx.beginPath();
         ctx.arc(this.x, this.y, 1.2, 0, Math.PI * 2);
         ctx.fill();
@@ -44,7 +44,7 @@ class Particle {
 }
 
 const particles = [];
-const particleCount = 400;
+const particleCount = 600;
 
 for (let i = 0; i < particleCount; i++) {
     particles.push(new Particle());
