@@ -36,7 +36,7 @@ class Particle {
     }
 
     draw() {
-        ctx.fillStyle = "darkgreen";
+        ctx.fillStyle = "gray";
         ctx.beginPath();
         ctx.arc(this.x, this.y, 1.2, 0, Math.PI * 2);
         ctx.fill();
