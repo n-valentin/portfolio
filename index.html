@@ -24,8 +24,8 @@
             --offsetMargin-leftLeft: calc((50% - var(--offsetWidth)) - var(--basePadding)*1.5);
             --offsetMargin-leftRight: calc((50% + var(--basePadding)*1.5));
             --baseBorderRadius: 24px;
-            --colorprimary: rgb(164, 178, 225);
-            --colorsecondary: rgb(182, 162, 255);
+            --colorprimary: rgb(237, 199, 199);
+            --colorsecondary: rgb(255, 149, 145);
         }
         body {
             margin: 0;
@@ -52,6 +52,10 @@
         }
         img {
             border-radius: 10px;
+        }
+        video-skin {
+            max-width: 60%;
+            margin-left: 20%;
         }
 
         sbase {
@@ -146,6 +150,7 @@
             pointer-events: none;
             z-index: 1;
         }
+        /*matrix rain, scrapped*/
         #rain {
             display: block;
             position: absolute;
@@ -328,7 +333,7 @@ end)
 
         <img src="assets/img/fishtool.png"></img>
         <p data-key="fish1"></p>
-        <img src="assets/img/fishtoolcode.png"></img>
+        <img src="assets/img/fishtoolcode.png" style="margin-left: 24px;"></img>
 
     </newOffset>
     <newOffset>
