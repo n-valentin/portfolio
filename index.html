@@ -10,6 +10,10 @@
     <title>Portfolio - NV</title>
 
     <style>
+        @font-face {
+            font-family: Italianno-Regular;
+            src: url("assets/font/Italianno-Regular.woff2");
+        }
         :root {
             --cubeSize: 600px;
             --cubeSize2: calc(var(--cubeSize)/2);
@@ -133,7 +137,15 @@
             height: 36px;
             margin: 4px 4px;
         }
-
+        
+        .ternaryEx {
+            font-family: Italianno-Regular;
+            font-size: 64px;
+            line-height: 0;
+            text-align: center;
+            color: var(--colorprimary);
+            z-index: 999;
+        }
 
         /*background 3d cube-----------*/
         .cubeframe {
@@ -305,6 +317,10 @@
 
     </offset>
 
+
+    <!---->
+
+
     <!--spawn funny cube-->
     <div class="cubeframe">
         <div class="cube">
@@ -318,6 +334,16 @@
     </div>
 
     <newOffset>
+
+        <div class="ternaryEx">
+            <p>I Love Ternary Expressions!</p>
+            <span style="font-size: 24px;">
+                <code class="language-c">return (a > b) ? a : b</code>
+            </span>
+        </div>
+    
+        <br/>
+        <hr>
 
         <h2>Quake III Movement (Roblox Studio)</h2>
 
