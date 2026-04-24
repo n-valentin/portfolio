@@ -26,6 +26,7 @@
             --baseBorderRadius: 24px;
             --colorprimary: rgb(237, 199, 199);
             --colorsecondary: rgb(255, 149, 145);
+            --colortertiary: rgb(255, 112, 112);
         }
         body {
             margin: 0;
@@ -57,6 +58,9 @@
             max-width: 60%;
             margin-left: 20%; /*  50% - (60%/2) = 20%  */
         }
+        a { /*stupid ass name for referencing a link*/
+            color: var(--colorsecondary)
+        }
 
         sbase {
             display: block;
@@ -75,7 +79,7 @@
             display: block;
             position: relative;
             text-align: left;
-            height: 620px;
+            height: 652px;
             width: var(--offsetWidth);
             padding: var(--basePadding);
             margin: 40px var(--offsetMargin-leftLeft);
@@ -107,6 +111,29 @@
             padding-bottom: 12px;
             overflow-y:hidden;
         }
+
+        offsetBlock {
+            display: inline-block;
+            position: relative;
+            width: inherit;
+            min-height: 12px;
+            min-width: 24px;
+            margin: 8px -8px;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: var(--baseBorderRadius);
+            text-align: left;
+            line-height: 44px;
+            color: var(--colorsecondary);
+        }
+        offsetBlock img {
+            float:left;
+            white-space: nowrap;
+            width: 36px;
+            height: 36px;
+            margin: 4px 4px;
+        }
+
 
         /*background 3d cube-----------*/
         .cubeframe {
@@ -201,8 +228,15 @@
                 <li data-key="ul8"></li>
             </ul>
         </p>
-    </offset> <!--10x2 padding, 40 offset, 620 height-->
-    <offset style="margin-top: calc(-40px - 620px - 20px);margin-left: var(--offsetMargin-leftRight);position: absolute;">
+        
+        <offsetBlock style="padding: 4px;">
+            <img src="assets/img/github-icon.png" style="width: 40px;height: 40px;margin-top:2px"/>
+            <a href="https://github.com/n-valentin">n-valentin</a>
+            <a href="https://github.com/n-valentin/portfolio">portfolio</a>
+        </offsetBlock>
+
+    </offset> <!--10x2 padding, 40 offset, 652 height-->
+    <offset style="margin-top: calc(-40px - 652px - 20px);margin-left: var(--offsetMargin-leftRight);position: absolute;">
         <h2 data-key="h4"></h2> <!--Erfaring-->
         <p>
             <ul style="text-align: left;padding-left: 0%;">
@@ -232,11 +266,42 @@
         
         <hr>
 
-        <p style="text-align:left;line-height: 40px;">
-            <img src="assets/img/github-icon.png" style="float:left;width: 40px;height: 40px;">
-            <a href="https://github.com/n-valentin" style="color: var(--colorsecondary);">n-valentin</a>
-            <a href="https://github.com/n-valentin/portfolio" style="color: var(--colorsecondary);">portfolio</a>
-        </p>
+        <!--Left-->
+        <offsetBlock style="margin-top: 18px;">
+            <img src="assets/img/lua-icon.png"/>
+            <span style="color:var(--colortertiary)">▰▰▰▰▰</span>
+
+            <br/>
+
+            <img src="assets/img/csharp-icon.png"/>
+            ▰▰▰▰▱
+
+            <br/>
+
+            <img src="assets/img/fsharp-icon.png"/>
+            ▰▰▱▱▱
+
+            <!--Right-->
+            <div style="position:absolute;margin: -100px 180px;line-height: 10px;text-align: center;">
+                <span style="display:flex;">
+                    <img src="assets/img/html-icon.png"/>
+                    <img src="assets/img/css-icon.png"/>
+                    <img src="assets/img/js-icon.png"/>
+                </span>
+
+                <br/>
+                ▰▰▰▱▱
+
+            </div>
+        </offsetBlock>
+
+        <div style="display: flex;">
+            <i>
+            Source <a href="https://freebiesupply.com/logos/lua-logo">Lua</a> -
+            <a href="https://commons.wikimedia.org/wiki/File:C_Sharp_Logo_2023.svg">C#/F#</a> -
+            <a href="https://uxwing.com">HTML/CSS/JS</a>
+            </i>
+        </div>
 
     </offset>
 
@@ -301,7 +366,7 @@ connect_heartbeat = client.Heartbeat:Connect(function(dt)
 end)
 </code></pre>
 
-        <a href="https://prismjs.com" style="color: var(--colorsecondary);">
+        <a href="https://prismjs.com">
             <i><p>Prism Syntax Highlighter</p></i>
         </a>
 
@@ -313,9 +378,7 @@ end)
             </video-skin>
         </video-player>
 
-        <a href="https://prismjs.com" style="color: var(--colorsecondary);">
-            <i><p>VideoJS Video Player</p></i>
-        </a>
+        <a href="https://videojs.org"><i><p>VideoJS Video Player</p></i></a>
 
         <hr>
 
@@ -324,7 +387,7 @@ end)
 
         <img src="assets/img/vectorprojection.png"></img>
 
-        <a href="https://adrianb.io/2015/02/14/bunnyhop.html" style="color: var(--colorsecondary);">Source</a>
+        <a href="https://adrianb.io/2015/02/14/bunnyhop.html">Source</a>
 
     </newOffset>
     <newOffset>
