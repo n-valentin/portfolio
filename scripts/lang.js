@@ -34,7 +34,7 @@ const translations = {
 
         h5: "Kendskaber",
         ul17: "Netværk, Subnetting, Kommunikationsteori",
-        ul18: "Kendskab til AI siden 2021 — Vibecoding, Prompt Engineering",
+        ul18: "AI siden 2021 — Vibecoding, Prompt Engineering",
 
 
         prism1: "Code Block - Prism",
