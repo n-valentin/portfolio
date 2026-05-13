@@ -8,7 +8,7 @@ const translations = {
         h1: "Profil",
         p1: "Stille type med ADHD, hvilket giver mig ekstremt fokus og energi, når jeg arbejder med noget jeg brænder for.",
         p2: "Jeg lærer hurtigt, arbejder bedst selvstændigt med fordybelse og tekniske udfordringer alene, men bidrager også gerne i mindre samarbejdsgrupper.",
-        p3: "Jeg foretrækker ikke at arbejde med AI til problemløsning.",
+        p3: "Jeg arbejder fint med AI i produktion, men jeg prioriterer kvalitet, når det gælder.",
 
         h2: "Uddannelse",
 
@@ -34,7 +34,7 @@ const translations = {
 
         h5: "Kendskaber",
         ul17: "Netværk, Subnetting, Kommunikationsteori",
-        ul18: "Kendskab til AI siden 2021",
+        ul18: "Kendskab til AI siden 2021 — Vibecoding, Prompt Engineering",
 
 
         prism1: "Code Block - Prism",
@@ -62,7 +62,7 @@ const translations = {
         h1: "Profile",
         p1: "Chill person with ADHD, which gives me great focus and energy, when I work with something I enjoy.",
         p2: "I'm a fast learner, working best independently when immersed with technical challenges alone, but willing to contribute in groups.",
-        p3: "Personally against use of AI when it comes to problemsolving.",
+        p3: "I'm comfortable working with AI in production, but I prioritize quality when it matters.",
 
         h2: "Education",
 
@@ -88,7 +88,7 @@ const translations = {
 
         h5: "Familiarity",
         ul17: "Networking, Communication-theory",
-        ul18: "Familiar with AI since 2021",
+        ul18: "AI since 2021 — Vibecoding, Prompt Engineering",
 
 
         prism1: "Code Block Mockup by Prism",
